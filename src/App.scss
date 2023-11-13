@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;0,800;0,900;1,600&display=swap');
+
+// :root{
+  $primary:hsl(199,100%,33%);
+  $Secondary:hsl(187,85%,43%);
+  $gradientColor:linear-gradient(to right ,hsl(187,85%,43%),hsl(199,100%,33%));
+  $whiteColor:hsl(0,0,100%);
+  $blackColor:hsl(201,33%,16%);
+  $textColor:hsl(240,4%,36%);
+  $whiteColorDream:hsl(0,0,93%);
+  $grayText:rgb(190,190,190);
+  $inputColor:rgb(239,239,239);
+  $bodyColor:rgb(240,240,246);
+  $cardBG:rgb(225,225,235);
+
+
+// }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color: $bodyColor;
+  // height: 5000px;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+.container{
+  max-width: 100%;
+  width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.icon{
+  color: $primary;
+  font-size: 2rem;
+}
+
+.btn{
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background:$gradientColor ;
+  color: $whiteColor;
+  padding:.8rem .5rem;
+  cursor: pointer;
+  width: 150px;
+  transition: .3s linear;
+  &:hover{
+    background: $Secondary;
+  }
+}
+
+
+.flex{
+  display: flex;
+  align-items: center;
+}

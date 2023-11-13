@@ -1,0 +1,118 @@
+$primary:hsl(199,100%,33%);
+$Secondary:hsl(187,85%,43%);
+$gradientColor:linear-gradient(to right ,hsl(187,85%,43%),hsl(199,100%,33%));
+$whiteColor:hsl(0,0,100%);
+$blackColor:hsl(201,33%,16%);
+$textColor:hsl(240,4%,36%);
+$whiteColorDream:hsl(0,0,93%);
+$grayText:rgb(190,190,190);
+$inputColor:rgb(239,239,239);
+$bodyColor:rgb(240,240,246);
+$cardBG:rgb(225,225,235);
+
+
+
+
+ .title{
+    font-size: 2.5rem ;
+    margin-bottom: 1rem;
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    margin:1rem auto 2rem;
+
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        width: 80px;
+        border-radius: 3rem;
+        height: 5px;
+        background-color: rgb(73, 130, 242);
+
+    }
+
+ }
+
+ .Main_Content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 1.5rem;
+ 
+
+    .card{
+        background-color: $whiteColor;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 5Px rgba($color: #000000, $alpha: 0.3);
+        .ImgDiv{
+            width: 100%;
+            height: 200px;
+            transition: all .3s ease;
+            &:hover{
+                transform: scale(1.1);
+            }
+            img{
+                width: 100%;
+               height: 100%;
+                
+             }
+            
+        }
+        .Trip_Content{
+            padding: 1rem;
+            h3{
+                font-size: 1.7rem;
+                // margin-bottom: .3rem;
+                color: $blackColor;
+            }
+            p{
+                color: $grayText;
+                font-size: 15px;
+            }
+            div.p{
+                margin: .8rem 0 ;
+                border-top: 2px solid $inputColor;
+                border-bottom: 2px solid $inputColor;
+                padding: .8rem 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                b{
+                    font-size: 1.7rem;
+                }
+                span{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    font-weight: 500;
+                    p{
+                        width: fit-content;
+                        padding: 4px 6px;
+                        color: $whiteColor;
+                    }
+                }
+            }
+            .desc{
+                font-size: 14px;
+                margin-bottom: 1rem;
+                line-height: 1.5;
+                color: $textColor;
+            }
+            .details{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: .7rem 1rem;
+                gap: 10px;
+                .icon{
+                    color: $whiteColor;
+                    font-size: 1rem;
+
+                }
+            }
+        }
+
+    }
+ }

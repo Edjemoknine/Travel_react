@@ -1,0 +1,153 @@
+$primary:hsl(199,100%,33%);
+$Secondary:hsl(187,85%,43%);
+$gradientColor:linear-gradient(to right ,hsl(187,85%,43%),hsl(199,100%,33%));
+$whiteColor:hsl(0,0,100%);
+$blackColor:hsl(201,33%,16%);
+$textColor:hsl(240,4%,36%);
+$whiteColorDream:hsl(0,0,93%);
+$grayText:rgb(190,190,190);
+$inputColor:rgb(239,239,239);
+$bodyColor:rgb(240,240,246);
+$cardBG:rgb(225,225,235);
+
+
+footer{
+    position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+        // flex-direction: column;
+    .vidiv{
+        video{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            object-fit: cover;
+    
+        }
+     }
+     .secContent{
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .HitMeBack{
+            text-align: center;
+            h1{
+                color: $inputColor
+            }
+            .input{
+                display: flex;
+                align-items: center;
+                border: 1px solid $inputColor;
+                border-radius: 3rem;
+                padding: .5rem 2rem;
+                margin-top: 1rem;
+                
+                input{
+                    background-color: transparent;
+                    outline: none;
+                    border: none;
+                    color: $inputColor;
+                    &::placeholder{
+                        color: $inputColor;
+                    }
+                }
+                .icon{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .footerCard{
+            
+            
+            background-color: $whiteColor;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+
+            .prim{
+                display: flex;
+                align-items: flex-start;
+                gap: 2rem;
+                padding: 1.5rem;
+                @media (max-width:768px) {
+                    flex-direction: column;
+                }
+            }
+
+            .intro{
+                flex: .4;
+                .footerLogo{
+                    display: flex;
+                    gap: .5rem;
+                    margin-bottom: .7rem;
+                    color: $blackColor;
+
+                }
+                p{
+                    line-height: 1.5;
+                    font-size: 14px;
+                    color: $textColor;
+                    margin-bottom: 1rem;
+                }
+                .social{
+                    display: flex;
+                    gap: .5rem;
+                    .icon{
+                        cursor: pointer;
+                        transition: all .3s ease;
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+
+            .linkGroup{
+                flex: 1;
+                display: flex;
+                justify-content: space-around;
+                gap: 1rem;
+                flex-wrap: wrap;
+                .group{
+                    flex: 1 1 150px;
+                    h2{
+                        color: $blackColor;
+                        margin-bottom: .7rem;
+                    }
+                    div{
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+                        margin-bottom: .5rem;
+                        color: $textColor;
+                        transition: all .4s ease-in-out;
+
+                        &:hover{
+                            color: $Secondary;
+                            padding-left: .5rem;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .copyRight{
+                background-color: $primary;
+                padding: 1rem;
+                text-align: center;
+                color: $grayText;
+            }
+
+        }
+     }
+}
